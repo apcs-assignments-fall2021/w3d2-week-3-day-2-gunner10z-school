@@ -7,7 +7,9 @@ public class MyMain {
     //     isLetter('?') => false
     //     isLetter('4') => false
     public static boolean isLetter(char c) {
-        // REPLACE WITH YOUR CODE HERE
+        if ((c>='a'&&c<='z')||(c>='A'&&c<='Z')){
+            return true;
+        }
         return false;
     }
 
@@ -21,7 +23,11 @@ public class MyMain {
     //                             'f'
     //                             'g'
     public static void printChars(char c1, char c2) {
-        // REPLACE WITH YOUR CODE HERE
+        char currentChar=c1;
+        while(currentChar<=c2){
+            System.out.println(currentChar);
+            currentChar++;
+        }
     }
 
     // Given a char ch, and returns the next letter in the alphabet.
@@ -34,8 +40,14 @@ public class MyMain {
     //     nextLetter('a') => 'b'
     //     nextLetter('z') => 'a'
     public static char nextLetter(char ch) {
-        // REPLACE WITH YOUR CODE HERE
-        return ' ';
+        if (ch=='z'){
+            return 'a';
+        }
+        else if (ch=='Z') {
+            return 'A';
+        }
+        ch++;
+        return ch;
     }
 
     // Similar to the previous example, the method is given a char ch. However, the method
@@ -46,8 +58,14 @@ public class MyMain {
     //     nextNextNextLetter('a') => 'd'
     //     nextNextNextLetter('z') => 'c'
     public static char nextNextNextLetter(char ch) {
-        // REPLACE WITH YOUR CODE HERE
-        return ' ';
+        if (ch>='x'&&ch<='z'){
+            return (char)(ch-23);
+        }
+        else if (ch>='X'&&ch<='Z') {
+            return (char)(ch-23);
+        }
+        ch+=3;
+        return ch;
     }
 
 
